@@ -230,6 +230,7 @@ vendor.netflix.bsp_rev=Q8635-38577-1
 # Power
 debug.sf.enable_adpf_cpu_hint=true
 vendor.perf.framepacing.enable=1
+ro.vendor.extension_library=libqti-perfd-client.so
 
 # QCOM
 ro.soc.manufacturer=QTI
