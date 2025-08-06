@@ -282,7 +282,9 @@ $(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):init_xiaomi_peri
 
 # Keymint
 PRODUCT_PACKAGES += \
-    android.hardware.authsecret-service.nxp
+    android.hardware.authsecret-service.nxp \
+    android.hardware.security.keymint3-service.strongbox.nxp \
+    android.hardware.weaver-service.nxp
 
 PRODUCT_PACKAGES += \
     android.hardware.hardware_keystore_V3.xml
