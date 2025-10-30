@@ -25,10 +25,18 @@ echo "Cloning MiuiCamera device tree..."
 rm -rf device/xiaomi/peridot-miuicamera
 git clone https://github.com/sm8635-dev/device_xiaomi_peridot-miuicamera.git device/xiaomi/peridot-miuicamera
 
+<<<<<<< HEAD
 # MiuiCamera vendor tree (fresh clone)
 echo "Cloning MiuiCamera vendor tree..."
 rm -rf vendor/xiaomi/peridot-miuicamera
 git clone https://github.com/sm8635-dev/vendor_xiaomi_peridot-miuicamera.git vendor/xiaomi/peridot-miuicamera
+=======
+# ViperFX
+git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git packages/apps/ViPER4AndroidFX
+
+# Fix deprecated camera override flag
+BOARD_CONFIG=device/xiaomi/peridot-miuicamera/BoardConfig.mk
+>>>>>>> eebba7b (Introduce Viper4AndroidFX)
 
 rm -rf packages/apps/XiaomiDolby
 
