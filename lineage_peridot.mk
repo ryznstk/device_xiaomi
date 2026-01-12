@@ -24,7 +24,6 @@ PRODUCT_SYSTEM_NAME := peridot_global
 PRODUCT_SYSTEM_DEVICE := peridot
 
 # Flags
-TARGET_BUILD_APERTURE_CAMERA := false
 TARGET_DISABLE_EPPE := true
 # Evox
 WITH_GMS := true
