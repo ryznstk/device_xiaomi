@@ -264,6 +264,9 @@ $(call soong_config_set,lineage_health,fast_charge_value_none,0)
 $(call soong_config_set,lineage_health,fast_charge_value_fast_charge,1)
 $(call soong_config_set,lineage_health,fast_charge_value_super_fast_charge,2)
 
+# Lineage-Priv
+-include vendor/evolution-priv/keys/keys.mk
+
 # Logging
 SPAMMY_LOG_TAGS := \
     MiClstc \
@@ -519,4 +522,3 @@ PRODUCT_COPY_FILES += \
 
 # Vendor
 $(call inherit-product, vendor/xiaomi/peridot/peridot-vendor.mk)
-PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/lineage-priv/keys/releasekey

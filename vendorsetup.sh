@@ -44,12 +44,12 @@ rm -rf device/qcom/sepolicy_vndr/sm8650
 git clone -b lineage-23.2-caf-sm8650 https://github.com/LineageOS/android_device_qcom_sepolicy_vndr.git device/qcom/sepolicy_vndr/sm8650
 
 # Refresh signing keys
-if [ -d vendor/lineage-priv/keys ]; then
+if [ -d vendor/evolution-priv/keys ]; then
   echo "Removing existing signing keys..."
-  rm -rf vendor/lineage-priv/keys
+  rm -rf vendor/evolution-priv/keys
 fi
 echo "Cloning fresh signing keys..."
-git clone https://github.com/droidcore/private_key.git -b main vendor/lineage-priv/keys
+git clone https://github.com/droidcore/private_key.git -b evo vendor/evolution-priv/keys
 
 # Always back to root at the end
 if command -v croot &>/dev/null; then
