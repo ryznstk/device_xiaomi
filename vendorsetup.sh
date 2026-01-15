@@ -22,6 +22,16 @@ git clone -b lineage-23.0 https://github.com/ryznstk/hardware_xiaomi.git hardwar
 
 rm -rf packages/apps/XiaomiDolby
 
+# MiuiCamera device tree (fresh clone)
+echo "Cloning MiuiCamera device tree..."
+rm -rf device/xiaomi/peridot-miuicamera
+git clone https://github.com/sm8635-dev/device_xiaomi_peridot-miuicamera.git device/xiaomi/peridot-miuicamera
+
+# MiuiCamera vendor tree (fresh clone)
+echo "Cloning MiuiCamera vendor tree..."
+rm -rf vendor/xiaomi/peridot-miuicamera
+git clone https://github.com/sm8635-dev/vendor_xiaomi_peridot-miuicamera.git vendor/xiaomi/peridot-miuicamera
+
 # Viper4Android 
 echo "Cloning Viper4Android tree..."
 rm -rf packages/apps/ViPER4AndroidFX
@@ -42,6 +52,9 @@ git clone -b bq2 https://github.com/ryznstk/system_sepolicy system/sepolicy
 
 rm -rf device/qcom/sepolicy_vndr/sm8650
 git clone -b lineage-23.2-caf-sm8650 https://github.com/LineageOS/android_device_qcom_sepolicy_vndr.git device/qcom/sepolicy_vndr/sm8650
+
+rm -rf hardware/lineage/compat
+git clone https://github.com/ryznstk/android_hardware_lineage_compat.git hardware/lineage/compat
 
 # Refresh signing keys
 if [ -d vendor/evolution-priv/keys ]; then
