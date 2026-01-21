@@ -3,7 +3,7 @@
 # Vendor (fresh clone)
 echo "Cloning vendor tree..."
 rm -rf vendor/xiaomi/peridot
-git clone -b qpr2 https://github.com/ryznstk/qpr.git vendor/xiaomi/peridot
+git clone -b https://gitlab.com/blu96/vendor-xiaomi-peridot-qpr-2.git vendor/xiaomi/peridot
 
 # Kernel source (fresh clone)
 echo "Cloning kernel source tree..."
@@ -13,7 +13,7 @@ rm -rf kernel/xiaomi/sm8635-modules
 git clone -b lineage-23.0 --depth 1 https://github.com/ryznstk/android_kernel_xiaomi_sm8635-modules.git kernel/xiaomi/sm8635-modules
 
 rm -rf kernel/xiaomi/sm8635-devicetrees
-git clone -b lineage-23.0 --depth 1 https://github.com/peridot-dev/android_kernel_xiaomi_sm8635-devicetrees.git kernel/xiaomi/sm8635-devicetrees
+git clone -b lineage-23.2 --depth 1 https://github.com/peridot-dev/android_kernel_xiaomi_sm8635-devicetrees.git kernel/xiaomi/sm8635-devicetrees
 
 # Hardware xiaomi (fresh clone)
 echo "Cloning hardware xiaomi source..."
@@ -52,9 +52,6 @@ git clone -b bq2 https://github.com/ryznstk/system_sepolicy system/sepolicy
 
 rm -rf device/qcom/sepolicy_vndr/sm8650
 git clone -b lineage-23.2-caf-sm8650 https://github.com/LineageOS/android_device_qcom_sepolicy_vndr.git device/qcom/sepolicy_vndr/sm8650
-
-rm -rf hardware/lineage/compat
-git clone https://github.com/ryznstk/android_hardware_lineage_compat.git hardware/lineage/compat
 
 # Refresh signing keys
 if [ -d vendor/evolution-priv/keys ]; then
