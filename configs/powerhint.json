@@ -264,6 +264,42 @@
       "Value": "0"
     },
     {
+      "PowerHint": "DEVICE_IDLE",
+      "Node": "CPUBigPlusClusterMinFreq",
+      "Duration": 0,
+      "Value": "480000"
+    },
+    {
+      "PowerHint": "DEVICE_IDLE",
+      "Node": "CPUBigClusterMinFreq",
+      "Duration": 0,
+      "Value": "480000"
+    },
+    {
+      "PowerHint": "DEVICE_IDLE",
+      "Node": "CPULittleClusterMinFreq",
+      "Duration": 0,
+      "Value": "595200"
+    },
+    {
+      "PowerHint": "DEVICE_IDLE",
+      "Node": "GPUMinFreq",
+      "Duration": 0,
+      "Value": "255000000"
+    },
+    {
+      "PowerHint": "DEVICE_IDLE",
+      "Node": "UclampTAMin",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "DEVICE_IDLE",
+      "Node": "UclampFGMin",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "PowerHALRenderingState",
       "Duration": 0,
