@@ -904,6 +904,9 @@
     <!-- Media controls -->
     <bool name="config_mediaControlsTurbulenceByDefault">true</bool>
 
-         <!-- Maximum velocity to initiate a fling, as measured in dips per second. -->
+     <!-- True if the device supports Sustained Performance Mode -->
+    <bool name="config_sustainedPerformanceModeSupported">true</bool>
+
+     <!-- Maximum velocity to initiate a fling, as measured in dips per second. -->
     <dimen name="config_viewMaxFlingVelocity">12000dp</dimen>
 </resources>
