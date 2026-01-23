@@ -247,6 +247,12 @@ on property:vendor.post_boot.parsed=1
     write /proc/irq/70/smp_affinity_list 2
     write /proc/irq/222/smp_affinity_list 1
 
+    # Battery Saving Tweak
+    write /proc/sys/kernel/perf_cpu_time_max_percent 5
+    write /proc/sys/vm/dirty_writeback_centisecs 3000
+    write /proc/sys/vm/dirty_ratio 30
+    write /proc/sys/vm/stat_interval 10
+
     # CPUSets
     setprop dalvik.vm.dex2oat-cpu-set 0,1,2,3,4,5,6
     setprop dalvik.vm.dex2oat-threads 6
