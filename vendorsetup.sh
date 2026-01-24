@@ -34,9 +34,7 @@ rm -rf vendor/xiaomi/peridot-miuicamera
 git clone https://github.com/sm8635-dev/vendor_xiaomi_peridot-miuicamera.git vendor/xiaomi/peridot-miuicamera
 
 # Viper4Android 
-echo "Cloning Viper4Android tree..."
 rm -rf packages/apps/ViPER4AndroidFX
-git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git packages/apps/ViPER4AndroidFX
 
 # KProfiles (fresh clone)
 echo "Cloning KProfiles..."
