@@ -39,7 +39,7 @@ rm -rf packages/apps/ViPER4AndroidFX
 # KProfiles (fresh clone)
 echo "Cloning KProfiles..."
 rm -rf packages/apps/KProfiles
-git clone https://github.com/droidcore/packages_apps_KProfiles.git packages/apps/KProfiles
+git clone https://github.com/ryznstk/packages_apps_KProfiles.git packages/apps/KProfiles
 
 # Gamebar
 echo "Cloning Gamebar tree..."
