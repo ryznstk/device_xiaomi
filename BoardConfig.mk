@@ -34,7 +34,7 @@ AB_OTA_PARTITIONS := \
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv9-a
 TARGET_CPU_ABI := arm64-v8a
-TARGET_CPU_VARIANT := kryo785
+TARGET_CPU_VARIANT := cortex-a76
 
 # Audio
 $(call soong_config_set, android_hardware_audio, run_64bit, true)
@@ -181,7 +181,7 @@ TARGET_KERNEL_EXT_MODULES := \
 CAMERA_PACKAGE_NAME := com.android.camera
 
 # Partitions
--include vendor/lineage/config/BoardConfigReservedSize.mk
+-include vendor/infinity/config/BoardConfigReservedSize.mk
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
 BOARD_DTBOIMG_PARTITION_SIZE := 25165824
