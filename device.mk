@@ -284,6 +284,9 @@ $(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):init_xiaomi_peri
 PRODUCT_PACKAGES += \
     android.hardware.authsecret-service.nxp
 
+PRODUCT_PACKAGES += \
+    android.hardware.hardware_keystore.xml
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/hal_uuid_map.xml:$(TARGET_COPY_OUT_VENDOR)/etc/hal_uuid_map_peridot.xml
 
