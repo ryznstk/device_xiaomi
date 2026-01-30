@@ -46,6 +46,11 @@ echo "Cloning Gamebar tree..."
 rm -rf packages/apps/GameBar
 git clone https://github.com/droidcore/packages_apps_GameBar.git packages/apps/GameBar
 
+# LMO
+echo "Cloning LMOfreeroam tree..."
+rm -rf packages_apps_LMOFreeform
+git clone https://github.com/ryznstk/packages_apps_LMOFreeform.git packages_apps_LMOFreeform
+
 rm -rf system/sepolicy
 git clone -b bq2 https://github.com/ryznstk/system_sepolicy system/sepolicy
 
