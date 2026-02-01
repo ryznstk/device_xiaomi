@@ -25,7 +25,7 @@ popd
 # Hardware xiaomi (fresh clone)
 echo "Cloning hardware xiaomi source..."
 rm -rf hardware/xiaomi
-git clone -b lineage-23.0 https://github.com/ryznstk/hardware_xiaomi.git hardware/xiaomi
+git clone -b dolby https://github.com/ryznstk/hardware_xiaomi.git hardware/xiaomi
 
 rm -rf packages/apps/XiaomiDolby
 
