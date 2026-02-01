@@ -3,28 +3,39 @@
     {
       "Name": "CoreCtlEnableBig",
       "Path": "/sys/devices/system/cpu/cpu3/core_ctl/enable",
-      "Values": ["1", "0"],
+      "Values": [
+        "1",
+        "0"
+      ],
       "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
       "Name": "CoreCtlEnableLittle",
       "Path": "/sys/devices/system/cpu/cpu0/core_ctl/enable",
-      "Values": ["0"],
+      "Values": [
+        "0"
+      ],
       "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
       "Name": "CoreCtlEnablePrime",
       "Path": "/sys/devices/system/cpu/cpu7/core_ctl/enable",
-      "Values": ["1", "0"],
+      "Values": [
+        "1",
+        "0"
+      ],
       "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
       "Name": "CoreCtlMinCoresLittle",
       "Path": "/sys/devices/system/cpu/cpu0/core_ctl/min_cpus",
-      "Values": ["1", "3"],
+      "Values": [
+        "1",
+        "3"
+      ],
       "DefaultIndex": 0,
       "ResetOnInit": true
     },
@@ -56,86 +67,49 @@
     {
       "Name": "PMQoSCpuDmaLatency",
       "Path": "/dev/cpu_dma_latency",
-      "Values": ["1", "44"],
+      "Values": [
+        "1"
+      ],
       "HoldFd": true
-    },
-    {
-      "Name": "UclampTAMin",
-      "Path": "/dev/cpuctl/top-app/cpu.uclamp.min",
-      "Values": ["0", "40"],
-      "DefaultIndex": 0,
-      "ResetOnInit": true
-    },
-    {
-      "Name": "UclampTALatency",
-      "Path": "/dev/cpuctl/top-app/cpu.uclamp.latency_sensitive",
-      "Values": ["1", "0"],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "UclampFGMin",
-      "Path": "/dev/cpuctl/foreground/cpu.uclamp.min",
-      "Values": ["0", "30"],
-      "DefaultIndex": 0,
-      "ResetOnInit": true
-    },
-    {
-      "Name": "SchedMinTaskUtilForBoost",
-      "Path": "/proc/sys/walt/sched_min_task_util_for_boost",
-      "Values": ["0", "51"],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "SchedMinTaskUtilForColoc",
-      "Path": "/proc/sys/walt/sched_min_task_util_for_colocation",
-      "Values": ["0", "35"],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "SchedMinTaskUtilForUclamp",
-      "Path": "/proc/sys/walt/sched_min_task_util_for_uclamp",
-      "Values": ["0", "51"],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "SleepDisabled",
-      "Path": "/sys/devices/system/cpu/qcom_lpm/parameters/sleep_disabled",
-      "Values": ["0", "1"],
-      "DefaultIndex": 0,
-      "ResetOnInit": true
-    },
-    {
-      "Name": "PredictionDisabled",
-      "Path": "/sys/devices/system/cpu/qcom_lpm/parameters/prediction_disabled",
-      "Values": ["0", "1"],
-      "DefaultIndex": 0,
-      "ResetOnInit": true
     },
     {
       "Name": "_proc_sys_walt_sched_boost",
       "Path": "/proc/sys/walt/sched_boost",
-      "Values": ["0", "1", "2"],
+      "Values": [
+        "0",
+        "1",
+        "2"
+      ],
       "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
       "Name": "_proc_sys_walt_sched_busy_hyst_ns",
       "Path": "/proc/sys/walt/sched_busy_hyst_ns",
-      "Values": ["0", "39"],
+      "Values": [
+        "0",
+        "39"
+      ],
       "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
       "Name": "_proc_sys_walt_sched_busy_hysteresis_enable_cpus",
       "Path": "/proc/sys/walt/sched_busy_hysteresis_enable_cpus",
-      "Values": ["0", "248"],
+      "Values": [
+        "0",
+        "248"
+      ],
       "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
       "Name": "_proc_sys_walt_sched_downmigrate",
       "Path": "/proc/sys/walt/sched_downmigrate",
-      "Values": ["65 85", "10 85"],
+      "Values": [
+        "65 85",
+        "10 85"
+      ],
       "DefaultIndex": 0,
       "ResetOnInit": true,
       "WriteOnly": true
@@ -143,14 +117,40 @@
     {
       "Name": "_proc_sys_walt_sched_idle_enough",
       "Path": "/proc/sys/walt/sched_idle_enough",
-      "Values": ["30", "0"],
+      "Values": [
+        "30",
+        "0"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true
+    },
+    {
+      "Name": "_proc_sys_walt_sched_min_task_util_for_boost",
+      "Path": "/proc/sys/walt/sched_min_task_util_for_boost",
+      "Values": [
+        "51",
+        "0"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true
+    },
+    {
+      "Name": "_proc_sys_walt_sched_min_task_util_for_colocation",
+      "Path": "/proc/sys/walt/sched_min_task_util_for_colocation",
+      "Values": [
+        "35",
+        "0"
+      ],
       "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
       "Name": "_proc_sys_walt_sched_upmigrate",
       "Path": "/proc/sys/walt/sched_upmigrate",
-      "Values": ["95 95", "50 85"],
+      "Values": [
+        "95 95",
+        "50 85"
+      ],
       "DefaultIndex": 0,
       "ResetOnInit": true,
       "WriteOnly": true
@@ -158,140 +158,218 @@
     {
       "Name": "_sys_devices_system_cpu_bus_dcvs_DDR_24091000.qcom,bwmon_ddr_hist_memory",
       "Path": "/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr/hist_memory",
-      "Values": ["20", "0"],
+      "Values": [
+        "20",
+        "0"
+      ],
       "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
       "Name": "_sys_devices_system_cpu_bus_dcvs_DDR_24091000.qcom,bwmon_ddr_hyst_length",
       "Path": "/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr/hyst_length",
-      "Values": ["0"],
+      "Values": [
+        "0"
+      ],
       "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
       "Name": "_sys_devices_system_cpu_bus_dcvs_DDR_24091000.qcom,bwmon_ddr_hyst_trigger_count",
       "Path": "/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr/hyst_trigger_count",
-      "Values": ["3", "0"],
+      "Values": [
+        "3",
+        "0"
+      ],
       "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
       "Name": "_sys_devices_system_cpu_bus_dcvs_DDR_24091000.qcom,bwmon_ddr_io_percent",
       "Path": "/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr/io_percent",
-      "Values": ["80", "100"],
+      "Values": [
+        "80",
+        "100"
+      ],
       "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
       "Name": "_sys_devices_system_cpu_bus_dcvs_DDR_24091000.qcom,bwmon_ddr_min_freq",
       "Path": "/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr/min_freq",
-      "Values": ["547000", "1555000", "681000"],
+      "Values": [
+        "547000",
+        "1555000",
+        "681000"
+      ],
       "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
       "Name": "_sys_devices_system_cpu_bus_dcvs_DDR_24091000.qcom,bwmon_ddr_sample_ms",
       "Path": "/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr/sample_ms",
-      "Values": ["4", "16", "33"],
+      "Values": [
+        "4",
+        "16",
+        "33"
+      ],
       "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
       "Name": "_sys_devices_system_cpu_bus_dcvs_LLCC_240b7400.qcom,bwmon_llcc_hist_memory",
       "Path": "/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc/hist_memory",
-      "Values": ["20", "0"],
+      "Values": [
+        "20",
+        "0"
+      ],
       "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
       "Name": "_sys_devices_system_cpu_bus_dcvs_LLCC_240b7400.qcom,bwmon_llcc_hyst_length",
       "Path": "/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc/hyst_length",
-      "Values": ["0"],
+      "Values": [
+        "0"
+      ],
       "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
       "Name": "_sys_devices_system_cpu_bus_dcvs_LLCC_240b7400.qcom,bwmon_llcc_hyst_trigger_count",
       "Path": "/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc/hyst_trigger_count",
-      "Values": ["3", "0"],
+      "Values": [
+        "3",
+        "0"
+      ],
       "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
       "Name": "_sys_devices_system_cpu_bus_dcvs_LLCC_240b7400.qcom,bwmon_llcc_io_percent",
       "Path": "/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc/io_percent",
-      "Values": ["80", "100"],
+      "Values": [
+        "80",
+        "100"
+      ],
       "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
       "Name": "_sys_devices_system_cpu_bus_dcvs_LLCC_240b7400.qcom,bwmon_llcc_max_freq",
       "Path": "/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc/max_freq",
-      "Values": ["1066000", "933000"],
+      "Values": [
+        "1066000",
+        "933000"
+      ],
       "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
       "Name": "_sys_devices_system_cpu_bus_dcvs_LLCC_240b7400.qcom,bwmon_llcc_sample_ms",
       "Path": "/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc/sample_ms",
-      "Values": ["4", "16", "33"],
+      "Values": [
+        "4",
+        "16",
+        "33"
+      ],
       "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
       "Name": "_sys_devices_system_cpu_cpu0_cpufreq_walt_hispeed_freq",
       "Path": "/sys/devices/system/cpu/cpu0/cpufreq/walt/hispeed_freq",
-      "Values": ["1113600", "787"],
+      "Values": [
+        "1113600",
+        "787"
+      ],
       "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
       "Name": "_sys_devices_system_cpu_cpu0_cpufreq_walt_hispeed_load",
       "Path": "/sys/devices/system/cpu/cpu0/cpufreq/walt/hispeed_load",
-      "Values": ["90", "99"],
+      "Values": [
+        "90",
+        "99"
+      ],
       "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
       "Name": "_sys_devices_system_cpu_cpu0_cpufreq_walt_pl",
       "Path": "/sys/devices/system/cpu/cpu3/cpufreq/walt/pl",
-      "Values": ["0"],
+      "Values": [
+        "0"
+      ],
       "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
       "Name": "_sys_devices_system_cpu_cpu0_cpufreq_walt_rtg_boost_freq",
       "Path": "/sys/devices/system/cpu/cpu0/cpufreq/walt/rtg_boost_freq",
-      "Values": ["595200", "0"],
+      "Values": [
+        "595200",
+        "0"
+      ],
       "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
       "Name": "_sys_devices_system_cpu_dynpf_enable_dynpf",
       "Path": "/sys/devices/system/cpu/dynpf/enable_dynpf",
-      "Values": ["0", "1"],
+      "Values": [
+        "0",
+        "1"
+      ],
       "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
       "Name": "GPUMaxFreq",
       "Path": "/sys/class/kgsl/kgsl-3d0/devfreq/max_freq",
-      "Values": ["1100000000", "1000000000", "950000000", "900000000", "835000000", "736000000", "684000000", "633000000", "500000000", "353000000", "255000000"],
+      "Values": [
+        "1100000000",
+        "1000000000",
+        "950000000",
+        "900000000",
+        "835000000",
+        "736000000",
+        "684000000",
+        "633000000",
+        "500000000",
+        "353000000",
+        "255000000"
+      ],
       "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
       "Name": "GPUMinFreq",
       "Path": "/sys/class/kgsl/kgsl-3d0/devfreq/min_freq",
-      "Values": ["1100000000", "1000000000", "950000000", "900000000", "835000000", "736000000", "684000000", "633000000", "500000000", "353000000", "255000000"],
+      "Values": [
+        "1100000000",
+        "1000000000",
+        "950000000",
+        "900000000",
+        "835000000",
+        "736000000",
+        "684000000",
+        "633000000",
+        "500000000",
+        "353000000",
+        "255000000"
+      ],
       "DefaultIndex": 10,
       "ResetOnInit": true
     },
     {
       "Name": "GPUIdleTimer",
       "Path": "/sys/class/kgsl/kgsl-3d0/idle_timer",
-      "Values": ["10000", "58"],
+      "Values": [
+        "10000",
+        "58"
+      ],
       "DefaultIndex": 1,
       "ResetOnInit": true
     }
@@ -302,30 +380,6 @@
       "Node": "_proc_sys_walt_sched_boost",
       "Value": "1",
       "Duration": 2000
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "PMQoSCpuDmaLatency",
-      "Value": "44",
-      "Duration": 1000
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "UclampTAMin",
-      "Value": "40",
-      "Duration": 3000
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "UclampFGMin",
-      "Value": "30",
-      "Duration": 3000
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "GPUIdleTimer",
-      "Value": "10000",
-      "Duration": 5000
     },
     {
       "PowerHint": "LAUNCH",
@@ -383,19 +437,13 @@
     },
     {
       "PowerHint": "INTERACTION",
-      "Node": "SchedMinTaskUtilForColoc",
+      "Node": "_proc_sys_walt_sched_min_task_util_for_colocation",
       "Value": "0",
       "Duration": 0
     },
     {
       "PowerHint": "INTERACTION",
-      "Node": "SchedMinTaskUtilForBoost",
-      "Value": "0",
-      "Duration": 0
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "SchedMinTaskUtilForUclamp",
+      "Node": "_proc_sys_walt_sched_min_task_util_for_boost",
       "Value": "0",
       "Duration": 0
     },
@@ -415,30 +463,6 @@
       "PowerHint": "INTERACTION",
       "Node": "GPUIdleTimer",
       "Value": "10000",
-      "Duration": 0
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "UclampTAMin",
-      "Value": "40",
-      "Duration": 3000
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "UclampTALatency",
-      "Value": "1",
-      "Duration": 0
-    },
-    {
-      "PowerHint": "INTERACTIVE",
-      "Node": "SleepDisabled",
-      "Value": "1",
-      "Duration": 0
-    },
-    {
-      "PowerHint": "INTERACTIVE",
-      "Node": "PredictionDisabled",
-      "Value": "1",
       "Duration": 0
     },
     {
