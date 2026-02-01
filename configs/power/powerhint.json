@@ -324,54 +324,6 @@
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
-    },
-    {
-      "Name": "GPUMaxFreq",
-      "Path": "/sys/class/kgsl/kgsl-3d0/devfreq/max_freq",
-      "Values": [
-        "1100000000",
-        "1000000000",
-        "950000000",
-        "900000000",
-        "835000000",
-        "736000000",
-        "684000000",
-        "633000000",
-        "500000000",
-        "353000000",
-        "255000000"
-      ],
-      "DefaultIndex": 0,
-      "ResetOnInit": true
-    },
-    {
-      "Name": "GPUMinFreq",
-      "Path": "/sys/class/kgsl/kgsl-3d0/devfreq/min_freq",
-      "Values": [
-        "1100000000",
-        "1000000000",
-        "950000000",
-        "900000000",
-        "835000000",
-        "736000000",
-        "684000000",
-        "633000000",
-        "500000000",
-        "353000000",
-        "255000000"
-      ],
-      "DefaultIndex": 10,
-      "ResetOnInit": true
-    },
-    {
-      "Name": "GPUIdleTimer",
-      "Path": "/sys/class/kgsl/kgsl-3d0/idle_timer",
-      "Values": [
-        "10000",
-        "58"
-      ],
-      "DefaultIndex": 1,
-      "ResetOnInit": true
     }
   ],
   "Actions": [
@@ -391,12 +343,6 @@
       "PowerHint": "LAUNCH",
       "Node": "MSMPerfMinFreq",
       "Value": "0:2016000 1:2016000 2:2016000 3:2707200 4:2707200 5:2707200 6:2707200 7:2918400",
-      "Duration": 2000
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "GPUMinFreq",
-      "Value": "633000000",
       "Duration": 2000
     },
     {
@@ -451,18 +397,6 @@
       "PowerHint": "INTERACTION",
       "Node": "_sys_devices_system_cpu_bus_dcvs_LLCC_240b7400.qcom,bwmon_llcc_max_freq",
       "Value": "933000",
-      "Duration": 0
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "GPUMinFreq",
-      "Value": "500000000",
-      "Duration": 0
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "GPUIdleTimer",
-      "Value": "10000",
       "Duration": 0
     },
     {
@@ -718,12 +652,6 @@
       "Duration": 0
     },
     {
-      "PowerHint": "CAMERA_STREAMING_MID",
-      "Node": "GPUMinFreq",
-      "Value": "353000000",
-      "Duration": 0
-    },
-    {
       "PowerHint": "CAMERA_STREAMING_HIGH",
       "Node": "_sys_devices_system_cpu_bus_dcvs_LLCC_240b7400.qcom,bwmon_llcc_sample_ms",
       "Value": "16",
@@ -856,12 +784,6 @@
       "Duration": 0
     },
     {
-      "PowerHint": "CAMERA_STREAMING_HIGH",
-      "Node": "GPUMinFreq",
-      "Value": "353000000",
-      "Duration": 0
-    },
-    {
       "PowerHint": "CAMERA_LAUNCH",
       "Node": "PMQoSCpuDmaLatency",
       "Value": "1",
@@ -883,12 +805,6 @@
       "PowerHint": "CAMERA_LAUNCH",
       "Node": "MSMPerfMinFreq",
       "Value": "0:1593600 1:1593600 2:1593600 3:1286400 4:1286400 5:1286400 6:1286400 7:2150400",
-      "Duration": 1000
-    },
-    {
-      "PowerHint": "CAMERA_LAUNCH",
-      "Node": "GPUMinFreq",
-      "Value": "633000000",
       "Duration": 1000
     }
   ]
