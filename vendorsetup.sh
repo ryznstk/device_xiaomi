@@ -63,6 +63,11 @@ git clone -b bq2 https://github.com/ryznstk/system_sepolicy system/sepolicy
 rm -rf device/qcom/sepolicy_vndr/sm8650
 git clone -b lineage-23.2-caf-sm8650 https://github.com/LineageOS/android_device_qcom_sepolicy_vndr.git device/qcom/sepolicy_vndr/sm8650
 
+cd hardware/qcom-caf/common
+git fetch https://github.com/ryznstk/android_hardware_qcom-caf_common lineage-23.2
+git reset --hard FETCH_HEAD
+croot
+
 # Refresh signing keys
 if [ -d vendor/evolution-priv/keys ]; then
   echo "Removing existing signing keys..."
