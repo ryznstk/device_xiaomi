@@ -310,7 +310,7 @@ $(call soong_config_set,lineage_health,fast_charge_value_fast_charge,1)
 $(call soong_config_set,lineage_health,fast_charge_value_super_fast_charge,2)
 
 # Lineage-Priv
--include vendor/evolution-priv/keys/keys.mk
+-include vendor/lineage-priv/keys/keys.mk
 
 # Logging
 SPAMMY_LOG_TAGS := \
