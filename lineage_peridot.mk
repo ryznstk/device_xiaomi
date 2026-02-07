@@ -40,11 +40,8 @@ TARGET_INCLUDE_WEATHER := true
 TARGET_SUPPORTS_GOOGLE_FILES := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 PRODUCT_NO_CAMERA := true
-PERF_GOV_SUPPORTED := false
+PERF_GOV_SUPPORTED := true
 PERF_DEFAULT_GOV := walt
-
-GPU_FREQS_PATH := /sys/class/kgsl/kgsl-3d0/devfreq/available_frequencies
-GPU_MIN_FREQ_PATH := /sys/class/kgsl/kgsl-3d0/devfreq/min_freq
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="peridot_global-user 15 AQ3A.240912.001 OS2.0.208.0.VNPMIXM release-keys" \
