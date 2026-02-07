@@ -33,8 +33,4 @@ genfscon sysfs /devices/platform/goodix_ts.0/wakeup u:object_r:sysfs_wakeup:s0
 genfscon proc /sys/walt u:object_r:proc_walt:s0
 
 
-# Axion tuning
-
-genfscon sysfs /class/kgsl/kgsl-3d0/devfreq/available_frequencies                   u:object_r:sysfs_gpu:s0
-genfscon sysfs /class/kgsl/kgsl-3d0/devfreq/available_frequencies/min_freq                   u:object_r:sysfs_gpu:s0
 
