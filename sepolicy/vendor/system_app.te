@@ -1,7 +1,3 @@
-# Allow KProfiles to be adjusted by a system app
-allow system_app sysfs_kprofiles:file rw_file_perms;
-
-
 # Hals
 allow system_app hal_fingerprint_default:binder call;
 allow system_app hal_audio_default:binder call;
