@@ -200,6 +200,10 @@ on boot
     # an ack packet comes out of order
     write /proc/sys/net/netfilter/nf_conntrack_tcp_be_liberal 1
 
+    # Report max frequency to unity tasks.
+    write /proc/sys/walt/sched_lib_name "UnityMain,libunity.so,libil2cpp.so,com.miHoYo.,com.pubg.imobile,com.pubg.,com.activision."
+    write /proc/sys/walt/sched_lib_mask_force 255
+
     # Allow access for CCID command/response timeout configuration
     chown system system /sys/module/ccid_bridge/parameters/bulk_msg_timeout
 
@@ -420,10 +424,6 @@ on post-fs-data
     mkdir /data/vendor/qti-logkit/socket-public/ 2750 system diag
     mkdir /data/vendor/qti-logkit/logdata/ 2750 system shell
 
-    #Create SWAP related dirs
-    mkdir /data/vendor/swap 0770 root system
-    chmod 2770 /data/vendor/swap
-
     # set aggressive read ahead for dm-0 and dm-1 during boot up
     write /sys/block/dm-0/queue/read_ahead_kb 2048
     write /sys/block/dm-1/queue/read_ahead_kb 2048
@@ -563,11 +563,6 @@ on property:sys.boot_completed=1
     write /dev/cpuctl/camera-daemon/cpu.uclamp.max max
     write /dev/cpuctl/camera-daemon/cpu.uclamp.min 50
     write /dev/cpuctl/camera-daemon/cpu.uclamp.latency_sensitive 1
-
-on property:vendor.post_boot.parsed=1
-    # Kill WALT CPU input boost
-    write /proc/sys/walt/input_boost/input_boost_freq "0 0 0 0 0 0 0"
-    write /proc/sys/walt/input_boost/input_boost_ms 0
 
 on property:persist.vendor.radio.atfwd.start=false
     stop vendor.atfwd

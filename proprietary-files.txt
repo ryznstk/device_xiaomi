@@ -54,12 +54,7 @@ odm/mount/camera/lib/rfsa/adsp/libSnpeHtpV73Skel.so:vendor/lib/rfsa/adsp/libSnpe
 odm/mount/camera/lib64/rfs/dsp/libbitml_nsp_73nb_skel.so:vendor/lib64/rfs/dsp/libbitml_nsp_73nb_skel.so
 vendor/lib/rfsa/adsp/chre_qsh_shim.so
 vendor/lib/rfsa/adsp/libDspIOProxy_skel.so
-vendor/lib/rfsa/adsp/libdsp_streamer_qvrcam_receiver.so
-vendor/lib/rfsa/adsp/libeye_tracking_dsp_sample_skel.so
 vendor/lib/rfsa/adsp/libhalide_hexagon_remote_skel.so
-vendor/lib/rfsa/adsp/libqvr_3dof_tracker_skel.so
-vendor/lib/rfsa/adsp/libqvr_cam_dsp_driver_skel.so
-vendor/lib/rfsa/adsp/libqvr_dsp_driver_skel.so
 vendor/lib/rfsa/adsp/libtracker_6dof_skel_8450.so
 vendor/lib/rfsa/adsp/nearby.napp_header
 vendor/lib/rfsa/adsp/nearby.so
@@ -1236,28 +1231,6 @@ odm/firmware/evass-lt.b18
 odm/firmware/evass-lt.b19
 odm/firmware/evass-lt.mbn
 odm/firmware/evass-lt.mdt
-odm/firmware/evass.b00
-odm/firmware/evass.b01
-odm/firmware/evass.b02
-odm/firmware/evass.b03
-odm/firmware/evass.b04
-odm/firmware/evass.b05
-odm/firmware/evass.b06
-odm/firmware/evass.b07
-odm/firmware/evass.b08
-odm/firmware/evass.b09
-odm/firmware/evass.b10
-odm/firmware/evass.b11
-odm/firmware/evass.b12
-odm/firmware/evass.b13
-odm/firmware/evass.b14
-odm/firmware/evass.b15
-odm/firmware/evass.b16
-odm/firmware/evass.b17
-odm/firmware/evass.b18
-odm/firmware/evass.b19
-odm/firmware/evass.mbn
-odm/firmware/evass.mdt
 
 # Configstore
 vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service
@@ -1314,6 +1287,7 @@ vendor/lib64/libqisl.so
 vendor/lib64/libqwes.so
 vendor/lib64/librpmb.so
 vendor/lib64/libssd.so
+vendor/lib64/libspl.so
 vendor/lib64/vendor.qti.hardware.qseecom-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
 
@@ -1795,33 +1769,17 @@ vendor/bin/system_dlkm_modprobe.sh
 vendor/bin/vendor_modprobe.sh
 vendor/etc/init/hw/init.qti.kernel.rc
 
-# Keymaster
-vendor/bin/hw/android.hardware.keymaster@4.0-service-qti
+# Keymint
+vendor/bin/hw/android.hardware.security.keymint-service-qti
+vendor/bin/KmInstallKeybox
+vendor/etc/hal_uuid_map_peridot.xml
+vendor/etc/init/android.hardware.security.keymint-service-qti.rc
+vendor/etc/vintf/manifest/android.hardware.security.keymint-service-qti.xml
 vendor/lib64/libkeymasterdeviceutils.so
 vendor/lib64/libkeymasterprovision.so
 vendor/lib64/libkeymasterutils.so
 vendor/lib64/libqcbor.so
 vendor/lib64/libqtikeymaster4.so
-
-# Keymint
-vendor/bin/hw/android.hardware.security.keymint-service-qti
-vendor/bin/hw/android.hardware.security.keymint-service.strongbox-nxp
-vendor/bin/hw/android.hardware.weaver-service.nxp-qti
-vendor/etc/hal_uuid_map_peridot.xml
-vendor/etc/init/android.hardware.security.keymint-service-qti.rc
-vendor/etc/init/android.hardware.security.keymint-service.strongbox-nxp.rc
-vendor/etc/init/android.hardware.weaver-service.nxp.rc:vendor/etc/init/android.hardware.weaver-service.nxp-qti.rc
-vendor/etc/permissions/android.hardware.hardware_keystore.jc-strongbox-keymint3-nxp.xml
-vendor/etc/permissions/android.hardware.hardware_keystore.xml:vendor/etc/permissions/android.hardware.hardware_keystore.km300.xml
-vendor/etc/vintf/manifest/android.hardware.security.keymint-service-qti.xml
-vendor/etc/vintf/manifest/android.hardware.security.keymint3-service.strongbox-nxp.xml
-vendor/etc/vintf/manifest/android.hardware.security.sharedsecret3-service.strongbox-nxp.xml
-vendor/etc/vintf/manifest/android.hardware.weaver-service.nxp.xml:vendor/etc/vintf/manifest/android.hardware.weaver-service.nxp-qti.xml
-vendor/lib64/android.hardware.security.keymint-V3-ndk.so:vendor/lib64/android.hardware.security.keymintperidot.so;FIX_SONAME
-vendor/lib64/ese_weaver.so
-vendor/lib64/libcppbor_external.so:vendor/lib64/libcppbor_peridot.so;FIX_SONAME
-vendor/lib64/libjc_keymint_nxp.so
-vendor/lib64/libjc_keymint_transport_nxp.so
 vendor/lib64/libqtikeymint.so
 
 # Listen
@@ -1944,45 +1902,6 @@ odm/lib64/libQnnModelDlc.so
 odm/lib64/libQnnSaver.so
 odm/lib64/libQnnSystem.so
 
-# Perf
-odm/etc/thermalbreakboostconfig.xml
-vendor/bin/hw/vendor.qti.hardware.perf2-hal-service
-vendor/etc/init/vendor.qti.hardware.perf2-hal-service.rc
-vendor/etc/perf/avcsysnodesconfigs.xml
-vendor/etc/perf/commonresourceconfigs.xml
-vendor/etc/perf/commonsysnodesconfigs.xml
-vendor/etc/perf/exceptionrecoveryconfig.xml
-vendor/etc/perf/perfboostsconfig.xml
-vendor/etc/perf/perfboostselection.xml
-vendor/etc/perf/perfconfigstore.xml
-vendor/etc/perf/targetavcsysnodesconfigs.xml
-vendor/etc/perf/targetconfig.xml
-vendor/etc/perf/targetresourceconfigs.xml
-vendor/etc/perf/targetsysnodesconfigs.xml
-vendor/etc/perf/testcommonresourceconfigs.xml
-vendor/etc/perf/testtargetresourceconfigs.xml
-vendor/etc/perf/thermal-boost.conf
-vendor/etc/perf/thermalbreakboostconfig.xml
-vendor/etc/vintf/manifest/vendor.qti.hardware.perf2.xml
-vendor/lib64/liblearningmodule.so
-vendor/lib64/liblmthermallistner.so
-vendor/lib64/liblmutils-ns.so
-vendor/lib64/libmeters-ns.so
-vendor/lib64/libmeters.so
-vendor/lib64/libperfconfig.so
-vendor/lib64/libperfgluelayer.so
-vendor/lib64/libperfioctl.so
-vendor/lib64/libq-perflog.so
-vendor/lib64/libqti-perfd-client.so
-vendor/lib64/libqti-perfd.so
-vendor/lib64/libqti-util.so
-vendor/lib64/libqti-utils.so
-vendor/lib64/libskewknob.so
-vendor/lib64/libspl.so
-vendor/lib64/libsplh.so
-vendor/lib64/vendor.qti.hardware.perf2-V1-ndk.so
-vendor/lib64/vendor.qti.memory.pasrmanager-V1-ndk.so
-
 # Peripheral manager
 vendor/bin/pm-proxy
 vendor/bin/pm-service
@@ -2098,40 +2017,6 @@ vendor/lib64/libqspm-mem-utils-vendor.so
 vendor/lib64/vendor.qti.qspmhal-V1-ndk.so
 vendor/lib64/vendor.qti.qspmhal-impl.so
 vendor/lib64/vendor.qti.qspmhal@1.0.so
-
-# QVR
-vendor/bin/hw/qvrservice
-vendor/bin/qvrdatalogger
-vendor/bin/qvrservicetest
-vendor/etc/qvr/cfg/519/0/65536/mtpkailua.txt
-vendor/etc/qvr/cfg/519/0/65536/mtpkailua_6dof_config.xml
-vendor/etc/qvr/cfg/519/0/65536/mtpkailua_qvr_3dof_tracker_config.txt
-vendor/etc/qvr/cfg/557/0/65536/mtplanai.txt
-vendor/etc/qvr/cfg/557/0/65536/mtplanai_6dof_config.xml
-vendor/etc/qvr/cfg/557/0/65536/mtplanai_qvr_3dof_tracker_config.txt
-vendor/etc/qvr/qvr_hid_device_list.txt
-vendor/etc/qvr/qvr_usb_device_list.txt
-vendor/etc/qvr/qvrservice_config.txt
-vendor/etc/seccomp_policy/qvr@2.0.policy
-vendor/etc/vintf/manifest/vendor.qti.hardware.qxr-service.xml
-vendor/lib64/libDspIOProxy_stub.so
-vendor/lib64/libMapService.so
-vendor/lib64/libQEGA.qti.so
-vendor/lib64/libScenescape.so
-vendor/lib64/libStereoRectifyWrapper.so
-vendor/lib64/libeye_tracking_dsp_sample_stub.so
-vendor/lib64/libhalide_hexagon_host.so
-vendor/lib64/libpolygon.so
-vendor/lib64/libqvr_cam_cdsp_driver_stub.so
-vendor/lib64/libqvr_cdsp_driver_stub.so
-vendor/lib64/libqvr_eyetracking_plugin.so
-vendor/lib64/libqvrcamera_client.qti.so
-vendor/lib64/libqvrcameraplayback.so
-vendor/lib64/libqvrservice.so
-vendor/lib64/libqvrservice_client.qti.so
-vendor/lib64/libtracker_6dof_impl.so
-vendor/lib64/vendor.qti.hardware.qxr-V1-ndk.so
-vendor/lib64/vendor.qti.qegahal-V1-ndk_platform.so
 
 # RIL
 odm/etc/MESubway_prebuilt.db
@@ -2431,6 +2316,7 @@ vendor/lib64/vendor.qti.imsrtpservice@3.1.so;MODULE_SUFFIX=_vendor
 # Secure element
 vendor/bin/hw/android.hardware.secure_element-service.qti
 vendor/etc/init/android.hardware.secure_element-service.qti.rc
+vendor/etc/permissions/com.android.se.xml
 vendor/etc/vintf/manifest/android.hardware.secure_element.xml
 vendor/etc/vintf/manifest/secure_element-service.xml
 vendor/lib64/hw/libEseUtils.so
@@ -2675,7 +2561,6 @@ vendor/lib64/vendor.qti.hardware.vpp@1.3.so
 
 # VPU firmware
 odm/firmware/vpu30_2v.mbn
-odm/firmware/vpu33_4v.mbn
 
 # Vibrator firmware
 odm/firmware/aw8697_haptic.bin

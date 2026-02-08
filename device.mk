@@ -26,6 +26,9 @@ $(call inherit-product, hardware/qcom-caf/common/common.mk)
 # Call the MiuiCamera setup
 $(call inherit-product-if-exists, device/xiaomi/peridot-miuicamera/device.mk)
 
+# ART
+PRODUCT_ENABLE_UFFD_GC := true
+
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
@@ -243,7 +246,8 @@ PRODUCT_COPY_FILES += \
 # Init
 PRODUCT_PACKAGES += \
     charger_fw_fstab.qti \
-    fstab.qcom
+    fstab.qcom \
+    fstab.zram
 
 PRODUCT_PACKAGES += \
     init.class_main.sh \
@@ -270,7 +274,8 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
+    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom \
+    $(LOCAL_PATH)/rootdir/etc/fstab.zram:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.zram
 
 # KProfiles
 PRODUCT_PACKAGES += \
@@ -280,7 +285,15 @@ $(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):init_xiaomi_peri
 
 # Keymint
 PRODUCT_PACKAGES += \
-    android.hardware.authsecret-service.nxp
+    android.hardware.authsecret-service.nxp \
+    android.hardware.security.keymint3-service.strongbox.nxp \
+    android.hardware.weaver-service.nxp
+
+PRODUCT_PACKAGES += \
+    android.hardware.hardware_keystore_V3.xml
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/hal_uuid_map.xml:$(TARGET_COPY_OUT_VENDOR)/etc/hal_uuid_map_peridot.xml
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.device_id_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.device_id_attestation.xml \
@@ -392,7 +405,7 @@ PRODUCT_PACKAGES += \
     libqti-perfd-client
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+    $(LOCAL_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 TARGET_PROVIDES_POWERHAL := true
 

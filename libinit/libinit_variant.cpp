@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 The LineageOS Project
+ * Copyright (C) 2021-2025 The LineageOS Project
  *
  * SPDX-License-Identifier: Apache-2.0
  */
@@ -31,7 +31,9 @@ void set_variant_props(const variant_info_t variant) {
 
     set_ro_build_prop("brand", variant.brand, true);
     set_ro_build_prop("device", variant.device, true);
+    set_ro_build_prop("name", variant.name, true);
     set_ro_build_prop("marketname", marketname, true);
+    set_ro_build_prop("mod_device", variant.mod_device, true);
     set_ro_build_prop("model", variant.model, true);
     property_override("vendor.usb.product_string", marketname, true);
 
@@ -40,6 +42,7 @@ void set_variant_props(const variant_info_t variant) {
         set_ro_build_prop("fingerprint", variant.build_fingerprint);
         property_override("ro.bootimage.build.fingerprint", variant.build_fingerprint);
 
-        property_override("ro.build.description", fingerprint_to_description(variant.build_fingerprint));
+        property_override("ro.build.description",
+                          fingerprint_to_description(variant.build_fingerprint));
     }
 }
