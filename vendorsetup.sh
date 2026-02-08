@@ -33,14 +33,6 @@ echo "Cloning MiuiCamera vendor tree..."
 rm -rf vendor/xiaomi/peridot-miuicamera
 git clone https://github.com/sm8635-dev/vendor_xiaomi_peridot-miuicamera.git vendor/xiaomi/peridot-miuicamera
 
-# Viper4Android 
-rm -rf packages/apps/ViPER4AndroidFX
-
-# KProfiles (fresh clone)
-echo "Cloning KProfiles..."
-rm -rf packages/apps/KProfiles
-git clone https://github.com/ryznstk/packages_apps_KProfiles.git packages/apps/KProfiles
-
 # Gamebar
 echo "Cloning Gamebar tree..."
 rm -rf packages/apps/GameBar
